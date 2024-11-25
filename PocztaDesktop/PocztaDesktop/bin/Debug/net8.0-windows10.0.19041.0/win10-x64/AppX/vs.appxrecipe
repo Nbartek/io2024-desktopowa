@@ -29,25 +29,25 @@
     <AppXManifest Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-25T21:07:40.570</Modified>
+      <Modified>2024-11-25T21:22:38.812</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-11-25T21:07:40.167</Modified>
+      <Modified>2024-11-25T21:22:38.499</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PocztaDesktop.runtimeconfig.json">
       <PackagePath>PocztaDesktop.runtimeconfig.json</PackagePath>
-      <Modified>2024-11-25T20:44:04.358</Modified>
+      <Modified>2024-11-25T21:22:38.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PocztaDesktop.dll">
       <PackagePath>PocztaDesktop.dll</PackagePath>
-      <Modified>2024-11-25T21:07:39.303</Modified>
+      <Modified>2024-11-25T21:22:36.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>PocztaDesktop.exe</PackagePath>
-      <Modified>2024-11-25T21:07:39.309</Modified>
+      <Modified>2024-11-25T21:22:36.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -291,7 +291,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PocztaDesktop.deps.json">
       <PackagePath>PocztaDesktop.deps.json</PackagePath>
-      <Modified>2024-11-25T21:06:28.179</Modified>
+      <Modified>2024-11-25T21:22:38.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kubar\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

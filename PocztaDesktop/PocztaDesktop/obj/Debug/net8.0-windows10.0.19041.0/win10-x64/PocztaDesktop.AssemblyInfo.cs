@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PocztaDesktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c174057156e6e127d6cbc41763df79c8c5bde3f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0d40a07d6a0546061ac21aacbe0ce328e5aad5b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PocztaDesktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PocztaDesktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
