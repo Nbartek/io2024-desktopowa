@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net;
+using Newtonsoft.Json;
+using PocztaDesktop.Model;
 
 namespace PocztaDesktop.EndPoint
 {
     class GetEndPoint
     {
         //private string _url = "http://localhost:5118/api/Items";
-        public static string getEndPoint()
+        public static List<Item> getEndPoint()
         {
             //creating http client
             using (HttpClient _httpclient = new HttpClient())   //httpclient bedzie dostepny tylko w nawiasach klamrowych a using samo zajmie sie zwolnieniem pamieci
@@ -22,7 +24,6 @@ namespace PocztaDesktop.EndPoint
                 //Creating the request
                 Task<HttpResponseMessage> httpResponse = _httpclient.GetAsync("http://localhost:5118/api/Items");
                 HttpResponseMessage httpResponseMessage = httpResponse.Result;
-                //return (httpResponseMessage.ToString());
 
                 //status code
                 HttpStatusCode statusCode = httpResponseMessage.StatusCode;
@@ -32,7 +33,11 @@ namespace PocztaDesktop.EndPoint
                 //response content
                 HttpContent content = httpResponseMessage.Content;
                 string data = content.ReadAsStringAsync().Result;
-                return data;
+
+                //Convertowanie z json na klasy w c#
+                List<Item> Items = JsonConvert.DeserializeObject<List<Item>>(data);
+
+                return Items;
             }
         }
 

@@ -179,3 +179,5 @@ D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.
 D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\warehouse_logo.scale-100.png
+D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Json.Net.dll
+D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
