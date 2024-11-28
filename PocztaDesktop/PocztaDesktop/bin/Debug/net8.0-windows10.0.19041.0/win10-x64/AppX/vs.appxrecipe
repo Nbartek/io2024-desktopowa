@@ -29,7 +29,7 @@
     <AppXManifest Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-26T18:25:57.896</Modified>
+      <Modified>2024-11-28T11:47:19.899</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PocztaDesktop.dll">
       <PackagePath>PocztaDesktop.dll</PackagePath>
-      <Modified>2024-11-26T18:25:56.512</Modified>
+      <Modified>2024-11-28T11:47:18.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>PocztaDesktop.exe</PackagePath>
-      <Modified>2024-11-26T18:25:56.693</Modified>
+      <Modified>2024-11-28T11:47:18.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\agh\io2024-desktopowa\PocztaDesktop\PocztaDesktop\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

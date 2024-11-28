@@ -9,7 +9,7 @@
         <Image Source="warehouse_logo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
 
         <!-- Nagłówek -->
-        <Label Text="{Binding message}"
+        <Label Text="Zaloguj się do systemu"
                FontSize="24" 
                TextColor="#4A628A" 
                FontAttributes="Bold" 
@@ -17,7 +17,8 @@
 
         <!-- Pole login -->
         <Frame CornerRadius="10" Padding="0" BackgroundColor="#B9E5E8" HasShadow="False">
-            <Entry Placeholder="Login" 
+            <Entry x:Name="LoginEntry"
+                   Placeholder="Login" 
                    PlaceholderColor="#7AB2D3" 
                    TextColor="#4A628A" 
                    BackgroundColor="Transparent" 
@@ -26,7 +27,8 @@
 
         <!-- Pole hasło -->
         <Frame CornerRadius="10" Padding="0" BackgroundColor="#B9E5E8" HasShadow="False">
-            <Entry Placeholder="Hasło" 
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Hasło" 
                    IsPassword="True" 
                    PlaceholderColor="#7AB2D3" 
                    TextColor="#4A628A" 
@@ -40,7 +42,12 @@
                 BackgroundColor="#4A628A" 
                 CornerRadius="10" 
                 HeightRequest="50" 
-                FontAttributes="Bold" />
+                FontAttributes="Bold"
+                Clicked="Button_Clicked"/>
 
+        <Label x:Name="MessageLabel"
+               TextColor="Red"
+               IsVisible="False"/>
+        
     </VerticalStackLayout>
 </ContentPage>
