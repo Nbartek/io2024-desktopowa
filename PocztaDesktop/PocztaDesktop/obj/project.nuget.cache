@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aQf0e1DSBOk=",
+  "dgSpecHash": "ISkYyxPNMoU=",
   "success": true,
-  "projectFilePath": "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
+  "projectFilePath": "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kubar\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\kubar\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",

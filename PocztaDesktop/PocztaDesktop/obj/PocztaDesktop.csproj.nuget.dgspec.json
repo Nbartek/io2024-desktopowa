@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj": {}
+    "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj": {}
   },
   "projects": {
-    "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj": {
+    "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
+        "projectUniqueName": "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
         "projectName": "PocztaDesktop",
-        "projectPath": "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
+        "projectPath": "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\PocztaDesktop.csproj",
         "packagesPath": "C:\\Users\\kubar\\.nuget\\packages\\",
-        "outputPath": "D:\\agh\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\obj\\",
+        "outputPath": "D:\\agh\\test\\io2024-desktopowa\\PocztaDesktop\\PocztaDesktop\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
