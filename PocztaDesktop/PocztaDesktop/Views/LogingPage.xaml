@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.LogingPage"
+             Title="LogingPage">
+
+    <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+        <!-- Logo -->
+        <Image Source="warehouse_logo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+
+        <!-- Nagłówek -->
+        <Label Text="Zaloguj się do systemu"
+               FontSize="24" 
+               TextColor="#4A628A" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
+
+        <!-- Pole login -->
+        <Frame CornerRadius="10" Padding="0" BackgroundColor="#B9E5E8" HasShadow="False">
+            <Entry x:Name="LoginEntry"
+                   Placeholder="Login" 
+                   PlaceholderColor="#7AB2D3" 
+                   TextColor="#4A628A" 
+                   BackgroundColor="Transparent" 
+                   HeightRequest="50" />
+        </Frame>
+
+        <!-- Pole hasło -->
+        <Frame CornerRadius="10" Padding="0" BackgroundColor="#B9E5E8" HasShadow="False">
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Hasło" 
+                   IsPassword="True" 
+                   PlaceholderColor="#7AB2D3" 
+                   TextColor="#4A628A" 
+                   BackgroundColor="Transparent" 
+                   HeightRequest="50" />
+        </Frame>
+
+        <!-- Przycisk logowania -->
+        <Button Text="Zaloguj się" 
+                TextColor="White" 
+                BackgroundColor="#4A628A" 
+                CornerRadius="10" 
+                HeightRequest="50" 
+                FontAttributes="Bold"
+                Clicked="Button_Clicked"/>
+
+        <Label x:Name="MessageLabel"
+               TextColor="Red"
+               IsVisible="False"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
