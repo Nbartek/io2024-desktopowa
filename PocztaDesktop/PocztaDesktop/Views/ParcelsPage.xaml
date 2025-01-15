@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.ParcelsPage"
+             Title="ParcelsPage">
+    <StackLayout Padding="10">
+        <Button Text="Załaduj Paczki"
+                Clicked="LoadParcelsButton_Clicked"
+                HorizontalOptions="Center" />
+
+        <CollectionView x:Name="ParcelsCollectionView"
+                        ItemsSource="{Binding}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding DaneNadawcy}" FontSize="20" />
+                        <Label Text="{Binding DaneOdbiorcy}" FontSize="16" />
+                        <Label Text="{Binding Status}" FontSize="14" />
+                        <Label Text="{Binding DataNadania, StringFormat='Data Nadania: {0:dd/MM/yyyy}'}" FontSize="14" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

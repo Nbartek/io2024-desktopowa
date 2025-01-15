@@ -10,11 +10,9 @@ namespace PocztaDesktop.ViewModel
 {
     public class MainViewModel
     {
-        public string message { get; set; }
         public MainViewModel()
         {
-            List<Item> Items =  GetEndPoint.getEndPoint();
-            message = Items[0].Name +"-"+ Items[0].Description;
+
         }
     }
 }

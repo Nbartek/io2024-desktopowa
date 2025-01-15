@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using PocztaDesktop.Services;
+using System.Net.Http;
 
 namespace PocztaDesktop
 {
@@ -15,8 +17,9 @@ namespace PocztaDesktop
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

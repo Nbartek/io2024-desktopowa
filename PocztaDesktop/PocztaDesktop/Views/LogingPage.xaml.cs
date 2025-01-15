@@ -36,6 +36,7 @@ public partial class LogingPage : ContentPage
                 {
                     var result = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Success", "Login successful", "OK");
+                    Shell.Current.GoToAsync("ParcelsPage");
                 }
                 else
                 {
