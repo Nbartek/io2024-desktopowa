@@ -19,13 +19,23 @@ public partial class ParcelsPage : ContentPage
         {
             using (HttpClient _client = new HttpClient())
             {
+                var token = Preferences.Get("AuthToken", string.Empty);
+
+                if (string.IsNullOrWhiteSpace(token))
+                {
+                    await DisplayAlert("Error", "You are not authorized to perform this action.", "OK");
+                    return;
+                }
+
+                // Dodaj naglowek Authorization
+                _client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
                 var apiUrl = "http://localhost:5118/api/Items/show_parcels";
                 var response = await _client.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
-                    //var parcels = JsonSerializer.Deserialize<List<Paczki>>(json);
                     var parcels = JsonSerializer.Deserialize<List<Paczki>>(json, new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true

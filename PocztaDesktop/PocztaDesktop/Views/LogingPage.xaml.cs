@@ -35,6 +35,11 @@ public partial class LogingPage : ContentPage
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
+                    var responseObject = JsonSerializer.Deserialize<LoginResponse>(result, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                    Preferences.Set("AuthToken", responseObject.Token);
                     await DisplayAlert("Success", "Login successful", "OK");
                     Shell.Current.GoToAsync("ParcelsPage");
                 }
@@ -50,5 +55,9 @@ public partial class LogingPage : ContentPage
             await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
         }
 
+    }
+    public class LoginResponse
+    {
+        public string Token { get; set; }
     }
 }
