@@ -8,6 +8,8 @@ namespace PocztaDesktop
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ParcelsPage), typeof(ParcelsPage));
+            Routing.RegisterRoute(nameof(AdminMainPage), typeof(AdminMainPage));
+            Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
         }
     }
 }
