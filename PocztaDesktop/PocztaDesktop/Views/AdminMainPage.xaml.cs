@@ -11,7 +11,7 @@ public partial class AdminMainPage : ContentPage
 
     private async void OnEmployeesTapped(object sender, EventArgs e)
     {
-        //await Shell.Current.GoToAsync("");
+        await Shell.Current.GoToAsync("EmployesList");
     }
 
     private async void OnWarehouseTapped(object sender, EventArgs e)

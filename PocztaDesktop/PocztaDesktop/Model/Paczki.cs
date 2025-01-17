@@ -21,4 +21,5 @@ namespace PocztaDesktop.Model
         public byte[] SsmaTimeStamp { get; set; }
         public bool? CzyZniszczona { get; set; }
     }
+
 }

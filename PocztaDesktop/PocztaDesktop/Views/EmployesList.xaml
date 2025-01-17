@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.EmployesList"
+             Title="EmployesList">
+    <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*, Auto" Margin="10,0,10,0">
+        <!-- Logo -->
+        <Image Source="warehouse_logo.png" Grid.Row="0" Grid.Column="0" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+        <!-- Column Headers -->
+        <Grid Grid.Row="1" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+            <!-- Nagłówki -->
+            <Label Grid.Column="0" Text="ID" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="1" Text="Imię" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="2" Text="Nazwisko" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="3" Text="Adres" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="4" Text="Nr Telefonu" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="5" Text="Login" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="6" Text="Hasło" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="7" Text="ID Uprawnienia" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+        </Grid>
+
+        <!-- Employee Table -->
+        <CollectionView x:Name="EmployeeCollectionView" Grid.Row="2" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Employees}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+                        <!-- Dane z marginesem wewnętrznym -->
+                        <Label Grid.Column="0" Text="{Binding IdPracownika}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="1" Text="{Binding Imię}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="2" Text="{Binding Nazwisko}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="3" Text="{Binding Adres}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="4" Text="{Binding NrTelefonu}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="5" Text="{Binding Login}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="6" Text="{Binding Hasło}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="7" Text="{Binding IdUprawnienia}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Load Employees" Margin="10" 
+                VerticalOptions="End" Clicked="LoadEmployeesButton_Clicked" />
+
+        <!-- Floating Action Button (FAB) -->
+        <Button Text="+" BackgroundColor="DarkBlue" TextColor="White"
+                WidthRequest="60" HeightRequest="60" CornerRadius="30"
+                HorizontalOptions="End" VerticalOptions="End"
+                Margin="20" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.AddEmployeeForm"
+             Title="AddEmployeeForm">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Dodaj nowego użytkownika" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Imię" x:Name="NameEntry" />
+            <Entry Placeholder="Nazwisko" x:Name="SurnameEntry" />
+            <Entry Placeholder="Adres" x:Name="AddressEntry" />
+            <Entry Placeholder="Nr telefonu" x:Name="PhoneEntry" Keyboard="Telephone" />
+            <Entry Placeholder="Login" x:Name="LoginEntry" />
+            <Entry Placeholder="Hasło" x:Name="PasswordEntry" IsPassword="True" />
+            <Entry Placeholder="ID Uprawnienia" x:Name="PermissionIdEntry" Keyboard="Numeric" />
+
+            <Button Text="Zapisz" BackgroundColor="DarkBlue" TextColor="White" Clicked="SaveEmployeeButton_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
