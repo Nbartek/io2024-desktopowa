@@ -6,13 +6,14 @@ public partial class SettingsPage : ContentPage
 	{
 		InitializeComponent();
 	}
-    private void Button_Clicked(object sender, EventArgs e)
+    private void OnChangeThemeToDark(object sender, EventArgs e)
     {
-        this.BackgroundColor = Colors.Blue;
+        ((App)Application.Current).SetTheme("DarkTheme");
     }
-    private void OnResetBackground(object sender, EventArgs e)
+
+    private void OnChangeThemeToLight(object sender, EventArgs e)
     {
-        this.BackgroundColor = Colors.White;
+        ((App)Application.Current).SetTheme("LightTheme");
     }
 
 }

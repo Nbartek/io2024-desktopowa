@@ -4,11 +4,25 @@
              xmlns:local="clr-namespace:PocztaDesktop"
              x:Class="PocztaDesktop.App">
     <Application.Resources>
+
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            <!-- Motywy -->
+            <Color x:Key="LightBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#000000</Color>
+            <Color x:Key="DarkBackgroundColor">#121212</Color>
+            <Color x:Key="DarkTextColor">#FFFFFF</Color>
+
+            <!-- Dynamiczne zasoby -->
+            <Color x:Key="BackgroundColor">#FFFFFF</Color>
+            <Color x:Key="TextColor">#000000</Color>
         </ResourceDictionary>
+
+        <!-- Globalne dynamiczne zasoby -->
+        <ResourceDictionary>
+            <Color x:Key="BackgroundColor" >#FFFFFF</Color>
+            <Color x:Key="TextColor">#000000</Color>
+            <Color x:Key="Primary">#6200EE</Color>
+        </ResourceDictionary>
+    
     </Application.Resources>
 </Application>
