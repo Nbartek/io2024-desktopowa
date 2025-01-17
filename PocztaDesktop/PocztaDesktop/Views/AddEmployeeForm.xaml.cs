@@ -38,7 +38,7 @@ public partial class AddEmployeeForm : ContentPage
                 // Dodaj nag³ówek Authorization
                 _client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-                var apiUrl = "http://localhost:5118/api/Items/add_employee";
+                var apiUrl = "http://localhost:5118/api/Items/add-user";
                 var response = await _client.PostAsJsonAsync(apiUrl, newEmployee);
 
                 if (response.IsSuccessStatusCode)

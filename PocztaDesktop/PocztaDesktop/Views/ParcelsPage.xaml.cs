@@ -7,12 +7,16 @@ namespace PocztaDesktop.Views;
 public partial class ParcelsPage : ContentPage
 {
     public ObservableCollection<Paczki> Parcels { get; set; }
+    public ObservableCollection<Paczki> FilteredParcels { get; set; }
+
     public ParcelsPage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         Parcels = new ObservableCollection<Paczki>();
-        ParcelsCollectionView.ItemsSource = Parcels; // Przypisujemy Ÿród³o danych
+        FilteredParcels = new ObservableCollection<Paczki>();
+        ParcelsCollectionView.ItemsSource = FilteredParcels; // Przypisujemy Ÿród³o danych z filtrem
     }
+
     private async void LoadParcelsButton_Clicked(object sender, EventArgs e)
     {
         try
@@ -47,6 +51,7 @@ public partial class ParcelsPage : ContentPage
                         Parcels.Add(parcel);
                     }
 
+                    ApplyFilters(); // Filtruj po za³adowaniu
                     await DisplayAlert("Sukces", "Paczki zosta³y za³adowane.", "OK");
                 }
                 else
@@ -59,5 +64,27 @@ public partial class ParcelsPage : ContentPage
         {
             await DisplayAlert("B³¹d", $"Wyst¹pi³ problem: {ex.Message}", "OK");
         }
+    }
+
+    private void ApplyFilters()
+    {
+        FilteredParcels.Clear();
+
+        foreach (var parcel in Parcels)
+        {
+            if (FilterGabaryt.IsChecked && !(parcel.Gabaryt ?? false))
+                continue;
+            if (FilterCzyZniszczona.IsChecked && !(parcel.CzyZniszczona ?? false))
+                continue;
+            if (FilterDataNadania.IsChecked && !parcel.DataNadania.HasValue)
+                continue;
+
+            FilteredParcels.Add(parcel);
+        }
+    }
+
+    private void Filter_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        ApplyFilters(); // Aktualizuj widok po zmianie stanu checkboxa
     }
 }

@@ -3,24 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PocztaDesktop.Views.ParcelsPage"
              Title="ParcelsPage">
-    <StackLayout Padding="10">
-        <Button Text="Załaduj Paczki"
-                Clicked="LoadParcelsButton_Clicked"
-                HorizontalOptions="Center" />
+    <Grid RowDefinitions="Auto, Auto, Auto, *" ColumnDefinitions="*, Auto" Margin="10,0,10,0">
+        <!-- Logo -->
+        <Image Source="warehouse_logo.png" Grid.Row="0" Grid.Column="0" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"/>
 
-        <CollectionView x:Name="ParcelsCollectionView"
-                        ItemsSource="{Binding}"
-                        SelectionMode="None">
+        <!-- Filters -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+            <CheckBox x:Name="FilterGabaryt"   />
+            <CheckBox x:Name="FilterDataNadania"  />
+            <CheckBox x:Name="FilterCzyZniszczona" />
+        </StackLayout>
+
+        <!-- Column Headers -->
+        <Grid Grid.Row="2" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+            <Label Grid.Column="0" Text="ID" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="1" Text="Gabaryt" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="2" Text="Kod Nadawcy" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="3" Text="Kod Odbiorcy" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="4" Text="Dane Nadawcy" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="5" Text="Dane Odbiorcy" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="6" Text="Data Nadania" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="7" Text="Status" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+            <Label Grid.Column="8" Text="Czy Zniszczona" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+        </Grid>
+
+        <!-- Package Table -->
+        <CollectionView x:Name="ParcelsCollectionView" Grid.Row="3" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Packages}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10">
-                        <Label Text="{Binding DaneNadawcy}" FontSize="20" />
-                        <Label Text="{Binding DaneOdbiorcy}" FontSize="16" />
-                        <Label Text="{Binding Status}" FontSize="14" />
-                        <Label Text="{Binding DataNadania, StringFormat='Data Nadania: {0:dd/MM/yyyy}'}" FontSize="14" />
-                    </StackLayout>
+                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+                        <Label Grid.Column="0" Text="{Binding IdPaczki}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="1" Text="{Binding Gabaryt}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="2" Text="{Binding KodPocztowyNadawcy}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="3" Text="{Binding KodPocztowyOdbiorcy}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="4" Text="{Binding DaneNadawcy}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="5" Text="{Binding DaneOdbiorcy}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="6" Text="{Binding DataNadania}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="7" Text="{Binding Status}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                        <Label Grid.Column="8" Text="{Binding CzyZniszczona}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
+
+        <Button Text="Load Packages" Margin="10" 
+                VerticalOptions="End" Clicked="LoadParcelsButton_Clicked" />
+
+        <!-- Floating Action Button (FAB) -->
+        <Button Text="+" BackgroundColor="DarkBlue" TextColor="White"
+                WidthRequest="60" HeightRequest="60" CornerRadius="30"
+                HorizontalOptions="End" VerticalOptions="End"
+                Margin="20"/>
+    </Grid>
 </ContentPage>
