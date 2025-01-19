@@ -38,12 +38,20 @@ public partial class AdminMainPage : ContentPage
             // Wyœwietl dane na stronie
             UserLoginLabel.Text = $"Login: {login}";
             UserPermissionLabel.Text = $"Uprawnienia: {role}";
+
+            if (role == "Kierownik")
+            {
+                ramka.BackgroundColor = Colors.Gray; // Zmieñ kolor kafelka
+                ramka.IsEnabled = false; // Wy³¹cz mo¿liwoœæ klikniêcia
+            }
         }
         else
         {
             UserLoginLabel.Text = "Nie znaleziono danych u¿ytkownika.";
         }
     }
+
+
 
     private async void OnEmployeesTapped(object sender, EventArgs e)
     {

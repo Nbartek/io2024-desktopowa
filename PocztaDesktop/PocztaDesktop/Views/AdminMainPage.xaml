@@ -9,8 +9,7 @@
         <StackLayout Orientation="Vertical" 
                      VerticalOptions="Start" 
                      HorizontalOptions="End"
-                     Padding="10"
-                     Spacing="30">
+                     Padding="10">
             
             <Label x:Name="UserLoginLabel" Text="Login: " FontSize="14" TextColor="Gray" />
             <Label x:Name="UserPermissionLabel" Text="Uprawnienia: " FontSize="14" TextColor="Gray" />
@@ -34,7 +33,7 @@
                             <Label Text="Pracownicy" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnEmployeesTapped" />
+                            <TapGestureRecognizer Tapped="OnEmployeesTapped" x:Name="EmployeeTap" />
                         </Frame.GestureRecognizers>
                     </Frame>
 
