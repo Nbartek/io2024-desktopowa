@@ -12,6 +12,7 @@
         <!-- Filters -->
         <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
             <CheckBox x:Name="FilterGabaryt"   />
+            <Label Text="Gabaryt" VerticalOptions="Center" />
             <DatePicker x:Name="FilterDatePicker" 
                 Format="yyyy-MM-dd" 
                 Date="{Binding SelectedDate, Mode=TwoWay}" 
@@ -20,6 +21,7 @@
                 HorizontalOptions="Start" />
             <Label Text="Data Nadania" VerticalOptions="Center" />
             <CheckBox x:Name="FilterCzyZniszczona" />
+            <Label Text="Zniszczone" VerticalOptions="Center" />
         </StackLayout>
 
         <!-- Column Headers -->
@@ -64,6 +66,6 @@
         <Button Text="+" BackgroundColor="Green" TextColor="White"
                 WidthRequest="60" HeightRequest="60" CornerRadius="30"
                 HorizontalOptions="End" VerticalOptions="End"
-                Margin="20"/>
+                Margin="20" Clicked="Button_Clicked"/>
     </Grid>
 </ContentPage>

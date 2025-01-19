@@ -161,4 +161,9 @@ public partial class ParcelsPage : ContentPage
     {
         ApplyFilters(); // Aktualizuj widok po zmianie stanu checkboxa
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("AddParcelsForm");
+    }
 }

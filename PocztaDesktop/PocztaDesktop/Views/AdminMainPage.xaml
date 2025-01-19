@@ -4,46 +4,63 @@
              x:Class="PocztaDesktop.Views.AdminMainPage"
              BackgroundColor="{DynamicResource BackgroundColor}"
              Title="AdminMainPage">
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="30">
-            <!-- Logo firmy -->
-            <Image Source="warehouse_logo.png" HeightRequest="150" HorizontalOptions="Center" />
+    <Grid>
+        <!-- Login i uprawnienia w prawym górnym rogu -->
+        <StackLayout Orientation="Vertical" 
+                     VerticalOptions="Start" 
+                     HorizontalOptions="End"
+                     Padding="10"
+                     Spacing="30">
+            
+            <Label x:Name="UserLoginLabel" Text="Login: " FontSize="14" TextColor="Gray" />
+            <Label x:Name="UserPermissionLabel" Text="Uprawnienia: " FontSize="14" TextColor="Gray" />
+        </StackLayout>
 
-            <!-- Sekcja kafelków -->
-            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" RowSpacing="20" ColumnSpacing="20">
-                <!-- Kafelek Pracownicy -->
-                <Frame x:Name="ramka" BackgroundColor="#2196F3" CornerRadius="10" Padding="10">
-                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-                        <Image Source="pracownicy_icon.jpg" WidthRequest="50" HeightRequest="50" />
-                        <Label Text="Pracownicy" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnEmployeesTapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="30">
+                <!-- Logo firmy -->
+                <Image Source="warehouse_logo.png" HeightRequest="150" HorizontalOptions="Center" />
 
-                <!-- Kafelek Magazyn -->
-                <Frame BackgroundColor="#4CAF50" CornerRadius="10" Padding="10" Grid.Column="1">
-                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-                        <Image Source="magazyn_icon.png" WidthRequest="50" HeightRequest="50" />
-                        <Label Text="Magazyn" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnWarehouseTapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
+                <VerticalStackLayout Padding="20" Spacing="10">
+                    <Label Text="Witaj!" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" />
+                </VerticalStackLayout>
 
-                <!-- Kafelek Ustawienia -->
-                <Frame BackgroundColor="#FF5722" CornerRadius="10" Padding="10" Grid.Column="2">
-                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-                        <Image Source="settings_icon.png" WidthRequest="50" HeightRequest="50" />
-                        <Label Text="Ustawienia" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnSettingsTapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </Grid>
-        </VerticalStackLayout>
-    </ScrollView>
+                <!-- Sekcja kafelków -->
+                <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" RowSpacing="20" ColumnSpacing="20">
+                    <!-- Kafelek Pracownicy -->
+                    <Frame x:Name="ramka" BackgroundColor="#2196F3" CornerRadius="10" Padding="10">
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                            <Image Source="pracownicy_icon.jpg" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="Pracownicy" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnEmployeesTapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <!-- Kafelek Magazyn -->
+                    <Frame BackgroundColor="#4CAF50" CornerRadius="10" Padding="10" Grid.Column="1">
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                            <Image Source="magazyn_icon.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="Magazyn" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnWarehouseTapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <!-- Kafelek Ustawienia -->
+                    <Frame BackgroundColor="#FF5722" CornerRadius="10" Padding="10" Grid.Column="2">
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                            <Image Source="settings_icon.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="Ustawienia" FontSize="18" TextColor="White" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSettingsTapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

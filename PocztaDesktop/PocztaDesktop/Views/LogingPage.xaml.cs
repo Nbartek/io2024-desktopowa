@@ -41,6 +41,8 @@ public partial class LogingPage : ContentPage
                     });
                     Preferences.Set("AuthToken", responseObject.Token);
                     await DisplayAlert("Success", "Login successful", "OK");
+                    LoginEntry.Text = "";
+                    PasswordEntry.Text = "";
                     Shell.Current.GoToAsync("AdminMainPage");
                 }
                 else

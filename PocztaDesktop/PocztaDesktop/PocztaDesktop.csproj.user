@@ -9,6 +9,9 @@
     <MauiXaml Update="Views\AddEmployeeForm.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\AddParcelsForm.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\AdminMainPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
