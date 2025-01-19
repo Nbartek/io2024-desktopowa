@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PocztaDesktop.Views.ParcelsPage"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:views="clr-namespace:PocztaDesktop.Views"
              Title="ParcelsPage">
     <Grid RowDefinitions="Auto, Auto, Auto, *" ColumnDefinitions="*, Auto" Margin="10,0,10,0">
         <!-- Logo -->
@@ -10,12 +12,18 @@
         <!-- Filters -->
         <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
             <CheckBox x:Name="FilterGabaryt"   />
-            <CheckBox x:Name="FilterDataNadania"  />
+            <DatePicker x:Name="FilterDatePicker" 
+                Format="yyyy-MM-dd" 
+                Date="{Binding SelectedDate, Mode=TwoWay}" 
+                MinimumDate="2000-01-01" 
+                MaximumDate="{x:Static sys:DateTime.Today}" 
+                HorizontalOptions="Start" />
+            <Label Text="Data Nadania" VerticalOptions="Center" />
             <CheckBox x:Name="FilterCzyZniszczona" />
         </StackLayout>
 
         <!-- Column Headers -->
-        <Grid Grid.Row="2" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+        <Grid Grid.Row="2" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
             <Label Grid.Column="0" Text="ID" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
             <Label Grid.Column="1" Text="Gabaryt" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
             <Label Grid.Column="2" Text="Kod Nadawcy" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
@@ -32,7 +40,7 @@
                         ItemsSource="{Binding Packages}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
                         <Label Grid.Column="0" Text="{Binding IdPaczki}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="1" Text="{Binding Gabaryt}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="2" Text="{Binding KodPocztowyNadawcy}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
@@ -42,6 +50,8 @@
                         <Label Grid.Column="6" Text="{Binding DataNadania}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="7" Text="{Binding Status}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="8" Text="{Binding CzyZniszczona}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+
+                        <Button Grid.Column="9" Text="Usuń" BackgroundColor="Red" Clicked="OnDeletePackageClicked" CommandParameter="{Binding IdPaczki}" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
@@ -51,7 +61,7 @@
                 VerticalOptions="End" Clicked="LoadParcelsButton_Clicked" />
 
         <!-- Floating Action Button (FAB) -->
-        <Button Text="+" BackgroundColor="DarkBlue" TextColor="White"
+        <Button Text="+" BackgroundColor="Green" TextColor="White"
                 WidthRequest="60" HeightRequest="60" CornerRadius="30"
                 HorizontalOptions="End" VerticalOptions="End"
                 Margin="20"/>

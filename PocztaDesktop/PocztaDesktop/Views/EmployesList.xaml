@@ -8,7 +8,7 @@
         <Image Source="warehouse_logo.png" Grid.Row="0" Grid.Column="0" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"/>
 
         <!-- Column Headers -->
-        <Grid Grid.Row="1" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+        <Grid Grid.Row="1" BackgroundColor="LightGray" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
             <!-- Nagłówki -->
             <Label Grid.Column="0" Text="ID" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
             <Label Grid.Column="1" Text="Imię" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
@@ -25,7 +25,7 @@
                         ItemsSource="{Binding Employees}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
+                    <Grid Padding="5" ColumnDefinitions="Auto, *, *, *, *, *, *, *, *" RowSpacing="0" ColumnSpacing="1">
                         <!-- Dane z marginesem wewnętrznym -->
                         <Label Grid.Column="0" Text="{Binding IdPracownika}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="1" Text="{Binding Imię}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
@@ -35,6 +35,11 @@
                         <Label Grid.Column="5" Text="{Binding Login}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="6" Text="{Binding Hasło}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
                         <Label Grid.Column="7" Text="{Binding IdUprawnienia}" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,0"/>
+
+                        <Button Grid.Column="8" Text="Usuń" 
+                                Clicked="OnDeleteEmployeeClicked"
+                                CommandParameter="{Binding IdPracownika}"
+                                BackgroundColor="Red" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
