@@ -18,6 +18,12 @@
     <MauiXaml Update="Views\EmployesList.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\LadunekDetailsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\LadunkiPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\LogingPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -25,6 +31,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\WarehouseMainPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

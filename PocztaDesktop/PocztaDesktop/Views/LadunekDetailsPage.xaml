@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.LadunekDetailsPage"
+             Title="LadunekDetailsPage">
+    <StackLayout Padding="10">
+        <!-- Nagłówek strony -->
+        <Label Text="Szczegóły Ładunku" FontSize="24" Padding="10"/>
+
+        <!-- Id Samochodu -->
+        <Label Text="Samochód:" FontSize="18"/>
+        <Label x:Name="SamochodLabel" FontSize="18"/>
+
+        <!-- Status -->
+        <Label Text="Status:" FontSize="18"/>
+        <Label x:Name="StatusLabel" FontSize="18"/>
+
+        <!-- 
+        <Label Text="Pracownicy:" FontSize="18"/>
+        <ListView x:Name="pracownicyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Id_Pracownika}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        
+        <Label Text="Paczki:" FontSize="18"/>
+        <ListView x:Name="paczkiListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Id_Paczki}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> -->
+    </StackLayout>
+</ContentPage>

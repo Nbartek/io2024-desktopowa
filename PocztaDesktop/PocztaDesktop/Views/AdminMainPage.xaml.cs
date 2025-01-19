@@ -60,7 +60,7 @@ public partial class AdminMainPage : ContentPage
 
     private async void OnWarehouseTapped(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("ParcelsPage");
+        await Shell.Current.GoToAsync("WarehouseMainPage");
     }
 
     private async void OnSettingsTapped(object sender, EventArgs e)

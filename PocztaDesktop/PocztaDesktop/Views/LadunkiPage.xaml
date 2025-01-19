@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocztaDesktop.Views.LadunkiPage"
+             Title="LadunkiPage">
+    <StackLayout Padding="10">
+        <!-- Nagłówek strony -->
+        <Label Text="Lista Ładunków" FontSize="24" Padding="10"/>
+
+        <!-- Lista ładunków -->
+        <ListView x:Name="ladunkiListView"
+                  ItemSelected="OnLadunekSelected"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Status}" Detail="{Binding IdLadunek}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Przycisk do załadowania ładunków -->
+        <Button Text="Załaduj Ładunki" Clicked="LoadLadunkiButton_Clicked"/>
+    </StackLayout>
+</ContentPage>

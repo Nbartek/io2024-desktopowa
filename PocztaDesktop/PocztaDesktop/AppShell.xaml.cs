@@ -13,6 +13,8 @@ namespace PocztaDesktop
             Routing.RegisterRoute(nameof(EmployesList), typeof(EmployesList));
             Routing.RegisterRoute(nameof(AddEmployeeForm), typeof(AddEmployeeForm));
             Routing.RegisterRoute(nameof(AddParcelsForm), typeof(AddParcelsForm));
+            Routing.RegisterRoute(nameof(WarehouseMainPage), typeof(WarehouseMainPage));
+            Routing.RegisterRoute(nameof(LadunkiPage), typeof(LadunkiPage));   
         }
     }
 }
